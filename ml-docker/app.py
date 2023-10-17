@@ -42,7 +42,10 @@ def train_model():
     # Evaluate the model
     accuracy = accuracy_score(y_test, y_pred)
     classification_rep = classification_report(y_test, y_pred)
-    return f"Model trained. Accuracy: {accuracy:.2f}\n\n{classification_rep}"
+
+    # Render the results template and pass the results as variables
+    return render_template('results.html', accuracy=accuracy, classification_report=classification_rep)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
