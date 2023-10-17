@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-app = Flask(__name)
+app = Flask(__name__)
 
 # Load the Titanic dataset and prepare it
 data = pd.read_csv("titanic.csv")
